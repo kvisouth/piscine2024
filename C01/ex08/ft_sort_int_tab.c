@@ -21,7 +21,6 @@ void	ft_swap(int *a, int *b)
 
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int	tmp;
 	int	i;
 
 	i = 0;
@@ -42,10 +41,21 @@ void	ft_sort_int_tab(int *tab, int size)
 // {
 //     int tab[10] = {1, 5, 3, 4, 2, 6, 8, 7, 9, 0};
 //     int i = 0;
+
+// 	printf("unsorted : ");
+// 	while (i < 10)
+//     {
+//         printf("%d, ", tab[i]);
+//         i++;
+//     }
+
 //     ft_sort_int_tab(tab, 10);
+// 	i = 0;
+// 	printf("\nsorted : ");
+
 //     while (i < 10)
 //     {
-//         printf("%d\n", tab[i]);
+//         printf("%d, ", tab[i]);
 //         i++;
 //     }
 //     return 0;
