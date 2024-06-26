@@ -35,3 +35,17 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		i++;
 	return (i);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// int	main(int ac, char **av)
+// {
+// 	char				dest[100] = "BONJOUR";
+// 	char				src[100] = "LES OVNIS";
+// 	unsigned int		size = atoi(av[1]);
+
+// 	if (ac != 2)
+// 		return 0;
+// 	printf("retour de ft_strlcpy : %lu", ft_strlcpy(dest, src, size));
+// 	return 1;
+// }
