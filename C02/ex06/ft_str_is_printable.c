@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+J'ai eu KO parceque j'ai mis 33 au lieu de 32
+(Space est printable enfait)
+*/
 int	ft_str_is_printable(char *str)
 {
 	int	i;
@@ -19,7 +23,7 @@ int	ft_str_is_printable(char *str)
 		return (1);
 	while (str[i])
 	{
-		if (str[i] >= 33 && str[i] <= 126)
+		if (str[i] >= 32 && str[i] <= 126)
 			i++;
 		else
 			return (0);

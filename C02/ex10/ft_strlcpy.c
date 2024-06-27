@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
 /*
 Cette fonction copie src dans dest, de 0 jusqu'a size - 1.
 - Elle garantie que le resultat dans dest sera terminee par un \0.
@@ -17,35 +27,31 @@ Cette fonction copie src dans dest, de 0 jusqu'a size - 1.
 
 RETOUR:
 Cette fonction retourne la longueur de la string qu'il a essaye de creer.
-(Donc la longueur de src normalement)
+(Donc la longueur de src)
 */
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	while (src[i] && size > 1)
 	{
 		dest[i] = src[i];
 		i++;
+		size--;
 	}
-	dest[i] = '\0';
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	return (i);
+	if (size > 0)
+		dest[i] = '\0';
+	return (ft_strlen(src));
 }
 
 // #include <stdio.h>
-// #include <stdlib.h>
-// int	main(int ac, char **av)
+// int	main(void)
 // {
 // 	char				dest[100] = "BONJOUR";
 // 	char				src[100] = "LES OVNIS";
-// 	unsigned int		size = atoi(av[1]);
+// 	unsigned int		size = 10;
 
-// 	if (ac != 2)
-// 		return 0;
-// 	printf("retour de ft_strlcpy : %lu", ft_strlcpy(dest, src, size));
+// 	printf("retour de ft_strlcpy : %u", ft_strlcpy(dest, src, size));
 // 	return 1;
 // }

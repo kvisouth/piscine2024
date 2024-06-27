@@ -22,17 +22,14 @@ la fin de dest sera remplie avec des octets nuls.
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	while (src[j])
-		dest[i++] = src[j++];
-	if (i < j)
+	while (src[i])
 	{
-		while (i <= j)
-			dest[i++] = '\0';
+		dest[i] = src[i];
+		i++;
 	}
+	dest[i] = '\0'
 	return (dest);
 }
 
