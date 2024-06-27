@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevisout <kevisout@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-06-27 12:18:25 by kevisout          #+#    #+#             */
-/*   Updated: 2024-06-27 12:18:25 by kevisout         ###   ########.fr       */
+/*   Created: 2024-06-27 12:15:39 by kevisout          #+#    #+#             */
+/*   Updated: 2024-06-27 12:15:39 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,29 +28,15 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char **argv)
 {
-	int		i;
-	char	*tmp;
+	int	i;
 
-	i = 1;
-	if (argc < 3)
+	if (argc <= 1)
 		return (0);
-	while (i < argc)
+	i = argc - 1;
+	while (i > 0)
 	{
-		if (argv[i + 1] == NULL)
-			break ;
-		if (argv[i][0] > argv[i + 1][0])
-		{
-			tmp = argv[i];
-			argv[i] = argv [i + 1];
-			argv[i + 1] = tmp;
-			i = 0;
-		}
-		i++;
-	}
-	i = 1;
-	while (i < argc)
-	{
-		ft_putstr(argv[i++]);
+		ft_putstr(argv[i--]);
 		ft_putchar('\n');
 	}
+	return (1);
 }
