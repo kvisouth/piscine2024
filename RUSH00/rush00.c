@@ -11,11 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include "rush.h"
 
 /*
 IF 1: SI on est sur la premiere colonne OU la derniere colonne

@@ -11,11 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include "rush.h"
 
 void	rush01(int x, int y)
 {
