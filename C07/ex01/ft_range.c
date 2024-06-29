@@ -1,62 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevisout <kevisout@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-06-28 09:14:46 by kevisout          #+#    #+#             */
-/*   Updated: 2024-06-28 09:14:46 by kevisout         ###   ########.fr       */
+/*   Created: 2024-06-28 10:02:37 by kevisout          #+#    #+#             */
+/*   Updated: 2024-06-28 10:02:37 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+void	ft_swap(int *a, int *b)
 {
-	int	i;
+	int	tmp;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
-char	*ft_strcpy(char *dest, char *src)
+int	count_len(int a, int b)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	if (a > b)
+		ft_swap(&a, &b);
+	count = a;
+	while (a <= b)
+		count++;
+	return (count);
 }
 
-char	*ft_strdup(char *src)
+int	*ft_range(int min, int max)
 {
-	int		len;
-	char	*str;
+	int	len;
+	int	*tab;
+	int	i;
 
-	len = ft_strlen(src);
-	str = malloc((len + 1) * sizeof(char));
-	if (!str)
+	len = count_len;
+	if (min > max)
+		ft_swap(&min, &max);
+	tab = malloc(sizeof(int) * len);
+	if (!tab)
 		return (0);
-	str = ft_strcpy(str, src);
-	return (str);
+	i = 0;
+	while (min < max)
+		tab[i++] = min++;
+	return (tab);
 }
 
-#include <stdio.h>
 int	main(int ac, char **av)
 {
 	if (ac != 2)
 		return (0);
-	char	*copy;
-	copy = ft_strdup(av[1]);
-	printf("%s\n", copy);
-	free(copy);
-	return (1);
+	
 }
