@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 void	ft_swap(int *a, int *b)
 {
@@ -28,7 +29,7 @@ int	count_len(int a, int b)
 	if (a > b)
 		ft_swap(&a, &b);
 	count = a;
-	while (a <= b)
+	while (count <= b)
 		count++;
 	return (count);
 }
@@ -39,7 +40,7 @@ int	*ft_range(int min, int max)
 	int	*tab;
 	int	i;
 
-	len = count_len;
+	len = count_len(min, max);
 	if (min > max)
 		ft_swap(&min, &max);
 	tab = malloc(sizeof(int) * len);
@@ -53,7 +54,14 @@ int	*ft_range(int min, int max)
 
 int	main(int ac, char **av)
 {
-	if (ac != 2)
-		return (0);
-	
+	if (ac != 3)
+		return 0;
+	int i = 0;
+	int *tab = ft_range(atoi(av[1]), atoi(av[2]));
+	int len = atoi(av[2]) - atoi(av[1]);
+	printf("len = %d\n", len);
+	while (i < len)
+		printf("%d ", tab[i++]);
+	free(tab);
+	return 1;
 }
