@@ -20,20 +20,15 @@ char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
 	int	j;
-	int	k;
 
 	i = 0;
-	if (!to_find[i])
-		return (0);
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		j = 0;
-		k = i;
-		while (str[k] == to_find[j])
+		while (to_find[j] == str[i + j])
 		{
 			if (to_find[j + 1] == '\0')
 				return (str + i);
-			k++;
 			j++;
 		}
 		i++;
