@@ -33,18 +33,18 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	char src[] = "bonjour";
-	char dest_larger[9];
-	char dest_good[8];
-	char dest_smaller[5];
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char src[] = "bonjour";
+// 	char dest_larger[9];
+// 	char dest_good[8];
+// 	char dest_smaller[5];
 
-	ft_strcpy(dest_larger, src);
-	ft_strcpy(dest_good, src);
-	ft_strcpy(dest_smaller, src);
-	printf("larger   : %s\n",dest_larger);
-	printf("correct  : %s\n",dest_good);
-	printf("too small: %s\n",dest_smaller);
-}
+// 	ft_strcpy(dest_larger, src);
+// 	ft_strcpy(dest_good, src);
+// 	ft_strcpy(dest_smaller, src);
+// 	printf("larger   : %s\n",dest_larger);
+// 	printf("correct  : %s\n",dest_good);
+// 	printf("too small: %s\n",dest_smaller);
+// }

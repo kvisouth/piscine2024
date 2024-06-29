@@ -28,7 +28,7 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i])
 		i++;
-	write(1, str, i);	
+	write(1, str, i);
 }
 
 // int main (int ac, char **av)
