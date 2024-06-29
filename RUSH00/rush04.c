@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include "rush.h"
 
-void	rush01(int x, int y)
+void	rush04(int x, int y)
 {
 	int	co;
 	int	li;
