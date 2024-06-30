@@ -12,7 +12,6 @@
 
 #include <unistd.h>
 #include <limits.h>
-#include "rush.h"
 
 /* MANDATORY */
 void	ft_putchar(char c);
