@@ -11,7 +11,16 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <limits.h>
 #include "rush.h"
+
+/* MANDATORY */
+void	ft_putchar(char c);
+void	rush(int x, int y);
+
+/* BONUS */
+void	rush01(int x, int y);
+void	rush04(int x, int y);
 
 /*
 IF 1: SI on est sur la premiere colonne OU la derniere colonne
@@ -27,7 +36,7 @@ void	rush(int x, int y)
 	int	colonne;
 	int	ligne;
 
-	if (x < 1 || y < 1)
+	if (x < 1 || y < 1 || y > INT_MAX || x > INT_MAX)
 		return ;
 	ligne = 1;
 	while (ligne <= y)

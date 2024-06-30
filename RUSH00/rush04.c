@@ -11,14 +11,13 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "rush.h"
 
 void	rush04(int x, int y)
 {
 	int	co;
 	int	li;
 
-	if (x < 1 || y < 1)
+	if (x < 1 || y < 1 || y > INT_MAX || x > INT_MAX)
 		return ;
 	li = 1;
 	while (li <= y)
