@@ -13,13 +13,7 @@
 #include <unistd.h>
 #include <limits.h>
 
-/* MANDATORY */
 void	ft_putchar(char c);
-void	rush(int x, int y);
-
-/* BONUS */
-void	rush01(int x, int y);
-void	rush04(int x, int y);
 
 /*
 IF 1: SI on est sur la premiere colonne OU la derniere colonne

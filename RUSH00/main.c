@@ -11,7 +11,14 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "rush.h"
+
+/* MANDATORY */
+void	ft_putchar(char c);
+void	rush(int x, int y);
+
+/* BONUS */
+void	rush01(int x, int y);
+void	rush04(int x, int y);
 
 int	main(int ac, char **av)
 {

@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <limits.h>
+/* MANDATORY */
+void	ft_putchar(char c);
 
 void	rush04(int x, int y)
 {
