@@ -15,15 +15,6 @@
 
 void	ft_putchar(char c);
 
-/*
-IF 1: SI on est sur la premiere colonne OU la derniere colonne
-	ET que on est sur la premiere ou derniere ligne
-IF 2: SI on est sur premiere ou derniere ligne
-	ET que on est PAS sur la derniere et premiere colonne
-IF 3: SI on est sur la premiere et derniere colonne
-	ET qu'on est pas sur premiere et derniere ligne
-IF 4: SI on est PAS sur la premiere et derniere colonne/ligne
-*/
 void	rush(int x, int y)
 {
 	int	colonne;
@@ -51,11 +42,3 @@ void	rush(int x, int y)
 		ligne++;
 	}
 }
-
-// #include <stdlib.h>
-// int main (int ac, char **av)
-// {
-// 	if (ac != 3)
-// 		return 0;
-// 	rush(atoi(av[1]), atoi(av[2]));
-// }

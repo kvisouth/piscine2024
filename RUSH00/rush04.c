@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 #include <limits.h>
-/* MANDATORY */
+
 void	ft_putchar(char c);
 
 void	rush04(int x, int y)
@@ -43,11 +43,3 @@ void	rush04(int x, int y)
 		li++;
 	}
 }
-
-// #include <stdlib.h>
-// int main (int ac, char **av)
-// {
-// 	if (ac != 3)
-// 		return 0;
-// 	rush01(atoi(av[1]), atoi(av[2]));
-// }
