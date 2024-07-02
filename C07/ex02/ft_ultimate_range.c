@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kevisout <kevisout@student.42.fr>          #+#  +:+       +#+        */
+/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-06-29 07:42:55 by kevisout          #+#    #+#             */
-/*   Updated: 2024-06-29 07:42:55 by kevisout         ###   ########.fr       */
+/*   Created: 2024/06/29 07:42:55 by kevisout          #+#    #+#             */
+/*   Updated: 2024/07/02 22:52:20 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	tab = 0;
 	len = max - min;
 	if (min >= max)
-		return (NULL);
+		return (0);
 	tab = malloc(sizeof(int) * len);
 	if (!tab)
 		return (0);
@@ -33,3 +33,19 @@ int	ft_ultimate_range(int **range, int min, int max)
 	return (i);
 }
 
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	int	*range;
+// 	int	i;
+// 	int	len;
+
+// 	i = 0;
+// 	len = ft_ultimate_range(&range, 10, 20);
+// 	printf("len = %d\n", len);
+// 	while (i < len)
+// 		printf("%d ", range[i++]);
+// 	free(range);
+// 	return (0);
+// }

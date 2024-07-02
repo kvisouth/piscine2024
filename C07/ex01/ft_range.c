@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kevisout <kevisout@student.42.fr>          #+#  +:+       +#+        */
+/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-06-28 10:02:37 by kevisout          #+#    #+#             */
-/*   Updated: 2024-06-28 10:02:37 by kevisout         ###   ########.fr       */
+/*   Created: 2024/06/28 10:02:37 by kevisout          #+#    #+#             */
+/*   Updated: 2024/07/02 22:51:30 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,16 @@ int	*ft_range(int min, int max)
 	return (tab);
 }
 
-int	main(int ac, char **av)
-{
-	if (ac != 3)
-		return 0;
-	int i = 0;
-	int *tab = ft_range(atoi(av[1]), atoi(av[2]));
-	int len = atoi(av[2]) - atoi(av[1]);
-	printf("len = %d\n", len);
-	while (i < len)
-		printf("%d ", tab[i++]);
-	free(tab);
-	return 1;
-}
+// int	main(int ac, char **av)
+// {
+// 	if (ac != 3)
+// 		return 0;
+// 	int i = 0;
+// 	int *tab = ft_range(atoi(av[1]), atoi(av[2]));
+// 	int len = atoi(av[2]) - atoi(av[1]);
+// 	printf("len = %d\n", len);
+// 	while (i < len)
+// 		printf("%d ", tab[i++]);
+// 	free(tab);
+// 	return 1;
+// }
