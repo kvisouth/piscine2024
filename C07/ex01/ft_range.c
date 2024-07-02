@@ -13,40 +13,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void	ft_swap(int *a, int *b)
-{
-	int	tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-int	count_len(int a, int b)
-{
-	int	count;
-
-	if (a > b)
-		ft_swap(&a, &b);
-	count = a;
-	while (count <= b)
-		count++;
-	return (count);
-}
-
 int	*ft_range(int min, int max)
 {
 	int	len;
 	int	*tab;
 	int	i;
 
-	len = count_len(min, max);
-	if (min > max)
-		ft_swap(&min, &max);
+	i = 0;
+	tab = 0;
+	len = max - min;
+	if (min >= max)
+		return (NULL);
 	tab = malloc(sizeof(int) * len);
 	if (!tab)
 		return (0);
-	i = 0;
 	while (min < max)
 		tab[i++] = min++;
 	return (tab);

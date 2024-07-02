@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
@@ -37,15 +38,32 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
+int	set_max_size(int size, char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i])
+		i++;
+	if (size >= i - 1)
+		return (i);
+	return (size);
+}
+
 int	get_len(int size, char **strs, char *sep)
 {
 	int	i;
 	int	len;
 
+	(void)sep;
 	i = 0;
 	len = 0;
+	size = set_max_size(size, strs);
 	while (i < size)
-		len += ft_strlen(strs[i++]);
+	{
+		len += ft_strlen(strs[i]);
+		i ++;
+	}
 	len = len + (ft_strlen(sep) * (size - 1));
 	return (len);
 }
@@ -55,15 +73,18 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		i;
 	char	*str;
 
-	str = NULL;
 	i = 0;
+	str = NULL;
 	str = malloc(get_len(size, strs, sep) + 1);
 	if (!str)
 		return (NULL);
-	while (i <= size)
+	if (size == 0)
+		return (str);
+	size = set_max_size(size, strs);
+	while (i < size)
 	{
 		str = ft_strcat(str, strs[i]);
-		if (i < size)
+		if (i < size - 1)
 			str = ft_strcat(str, sep);
 		i++;
 	}
@@ -72,13 +93,13 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	return (str);
 }
 
-#include <stdio.h>
 int main(int ac, char **av)
 {
 	if (ac < 3)
 		return 0;
 	int size = atoi(av[1]);
 	char *sep = av[2];
+	av++;
 	av++;
 	av++;
 	char *str = ft_strjoin(size, av, sep);
