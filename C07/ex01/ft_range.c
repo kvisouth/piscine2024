@@ -52,16 +52,16 @@ int	*ft_range(int min, int max)
 	return (tab);
 }
 
-// int	main(int ac, char **av)
-// {
-// 	if (ac != 3)
-// 		return 0;
-// 	int i = 0;
-// 	int *tab = ft_range(atoi(av[1]), atoi(av[2]));
-// 	int len = atoi(av[2]) - atoi(av[1]);
-// 	printf("len = %d\n", len);
-// 	while (i < len)
-// 		printf("%d ", tab[i++]);
-// 	free(tab);
-// 	return 1;
-// }
+int	main(int ac, char **av)
+{
+	if (ac != 3)
+		return 0;
+	int i = 0;
+	int *tab = ft_range(atoi(av[1]), atoi(av[2]));
+	int len = atoi(av[2]) - atoi(av[1]);
+	printf("len = %d\n", len);
+	while (i < len)
+		printf("%d ", tab[i++]);
+	free(tab);
+	return 1;
+}

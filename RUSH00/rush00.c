@@ -5,36 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevisout <kevisout@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-06-29 09:53:22 by kevisout          #+#    #+#             */
-/*   Updated: 2024-06-29 09:53:22 by kevisout         ###   ########.fr       */
+/*   Created: 2024-06-30 13:37:43 by kevisout          #+#    #+#             */
+/*   Updated: 2024-06-30 13:37:43 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <limits.h>
 
 void	ft_putchar(char c);
 
-void	rush(int x, int y)
+void	rush(int C, int L)
 {
 	int	colonne;
 	int	ligne;
 
-	if (x < 1 || y < 1 || y > INT_MAX || x > INT_MAX)
+	if (C < 1 || L < 1)
 		return ;
 	ligne = 1;
-	while (ligne <= y)
+	while (ligne <= L)
 	{
 		colonne = 1;
-		while (colonne <= x)
+		while (colonne <= C)
 		{
-			if ((colonne == 1 || colonne == x) && (ligne == 1 || ligne == y))
+			if ((colonne == 1 || colonne == C) && (ligne == 1 || ligne == L))
 				ft_putchar('o');
-			if ((ligne == 1 || ligne == y) && (colonne > 1 && colonne < x))
+			if ((ligne == 1 || ligne == L) && (colonne > 1 && colonne < C))
 				ft_putchar('-');
-			if ((colonne == 1 || colonne == x) && (ligne > 1 && ligne < y))
+			if ((colonne == 1 || colonne == C) && (ligne > 1 && ligne < L))
 				ft_putchar('|');
-			if ((colonne > 1 && colonne < x) && (ligne > 1 && ligne < y))
+			if ((colonne > 1 && colonne < C) && (ligne > 1 && ligne < L))
 				ft_putchar(' ');
 			colonne++;
 		}

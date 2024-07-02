@@ -20,9 +20,11 @@ void	rush(int x, int y);
 void	rush01(int x, int y);
 void	rush04(int x, int y);
 
+#include <stdlib.h>
 int	main(int ac, char **av)
 {
 	if (ac != 3)
-		return (0);
-	rush(atoi(av[1]), atoi(av[2]));
+		return 0;
+	rush(atoi(av[1], atoi(av[2])));
+	return (0);
 }
