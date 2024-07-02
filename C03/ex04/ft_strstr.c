@@ -25,11 +25,8 @@ char	*ft_strstr(char *str, char *to_find)
 	int	j;
 
 	i = 0;
-	if (!str || !to_find)
-	{
-		printf("ayayay\n");
-		return (0);
-	}
+	if (!to_find[0])
+		return (str);
 	while (str[i] != '\0')
 	{
 		j = 0;
@@ -44,12 +41,13 @@ char	*ft_strstr(char *str, char *to_find)
 	return (0);
 }
 
-#include <stdio.h>
-#include <string.h>	
-int	main(int ac, char **av)
-{
-	if (ac != 3)
-		return 0;
-	printf("REAL :%s\n", strstr(av[1], av[2]));
-	printf("REPL :%s\n", ft_strstr(av[1], av[2]));
-}
+// #include <string.h>
+// #include <stdio.h>
+
+// int	main(int ac, char **av)
+// {
+// 	if (ac != 3)
+// 		return 0;
+// 	printf("REAL :%s\n", strstr(av[1], av[2]));
+// 	printf("REPL :%s\n", ft_strstr(av[1], av[2]));
+// }
