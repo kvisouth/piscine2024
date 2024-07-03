@@ -19,11 +19,11 @@ int	ft_recursive_power(int nb, int power)
 		return (0);
 	if (power == 0)
 		return (1);
-	return (nb * ft_recursive_power(nb + 1, power));
+	return (nb * ft_recursive_power(nb, power - 1));
 }
 
-int main (int ac, char **av)
-{
-	if (ac > 1)
-		printf("resultat :%d\n", ft_recursive_power(atoi(av[1]), atoi(av[2])));
-}
+// int main (int ac, char **av)
+// {
+// 	if (ac > 2)
+// 		printf("resultat :%d\n", ft_recursive_power(atoi(av[1]), atoi(av[2])));
+// }
