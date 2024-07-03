@@ -49,14 +49,14 @@ char	*ft_strdup(char *src)
 	return (str);
 }
 
-#include <stdio.h>
-int	main(int ac, char **av)
-{
-	if (ac != 2)
-		return (0);
-	char	*copy;
-	copy = ft_strdup(av[1]);
-	printf("%s\n", copy);
-	free(copy);
-	return (1);
-}
+// #include <stdio.h>
+// int	main(int ac, char **av)
+// {
+// 	if (ac != 2)
+// 		return (0);
+// 	char	*copy;
+// 	copy = ft_strdup(av[1]);
+// 	printf("%s\n", copy);
+// 	free(copy);
+// 	return (1);
+// }

@@ -41,7 +41,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		i++;
 	}
 	dest[dest_len + i] = '\0';
-	return (dest_len + src_len);	
+	return (dest_len + src_len);
 }
 
 // #include <stdio.h>

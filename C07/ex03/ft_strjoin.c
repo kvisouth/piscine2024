@@ -93,16 +93,16 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	return (str);
 }
 
-int main(int ac, char **av)
-{
-	if (ac < 3)
-		return 0;
-	int size = atoi(av[1]);
-	char *sep = av[2];
-	av++;
-	av++;
-	av++;
-	char *str = ft_strjoin(size, av, sep);
-	printf(">%s.\n", str);
-	free(str);
-}
+// int main(int ac, char **av)
+// {
+// 	if (ac < 3)
+// 		return 0;
+// 	int size = atoi(av[1]);
+// 	char *sep = av[2];
+// 	av++;
+// 	av++;
+// 	av++;
+// 	char *str = ft_strjoin(size, av, sep);
+// 	printf(">%s.\n", str);
+// 	free(str);
+// }
