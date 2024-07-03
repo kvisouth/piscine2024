@@ -14,15 +14,7 @@
 #include <stdlib.h>
 
 /*
-Factorielle exemples :
-nb = 2!
-1x2
 
-nb = 5!
-1x2x3x4x5 = 120
-
-nb = 6!
-1x2x3x4x5x6 = 720 (c'est 120x6)
 */
 int	ft_recursive_factorial(int nb)
 {

@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevisout <kevisout@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-07-03 12:39:18 by kevisout          #+#    #+#             */
-/*   Updated: 2024-07-03 12:39:18 by kevisout         ###   ########.fr       */
+/*   Created: 2024-07-03 13:15:24 by kevisout          #+#    #+#             */
+/*   Updated: 2024-07-03 13:15:24 by kevisout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-/*
-
-*/
-int	ft_recursive_power(int nb, int power)
+int	ft_fibonacci(int index)
 {
-	if (power < 0)
-		return (0);
-	if (power == 0)
-		return (1);
-	return (nb * ft_recursive_power(nb, power - 1));
+	
 }
-
-// int main (int ac, char **av)
-// {
-// 	if (ac > 2)
-// 		printf("resultat :%d\n", ft_recursive_power(atoi(av[1]), atoi(av[2])));
-// }
