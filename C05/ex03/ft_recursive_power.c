@@ -14,7 +14,11 @@
 #include <stdio.h>
 
 /*
+Faire : nb * ft_recursive_power(nb, power - 1)
+Revient en math a faire :
+multiplier nb par nb^power-1
 
+Il fait nb * .. * nb, power fois, et power baisse jusqu'a 0.
 */
 int	ft_recursive_power(int nb, int power)
 {
