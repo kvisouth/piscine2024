@@ -50,13 +50,18 @@ char	*ft_strdup(char *src)
 }
 
 // #include <stdio.h>
+// #include <string.h>
 // int	main(int ac, char **av)
 // {
 // 	if (ac != 2)
 // 		return (0);
 // 	char	*copy;
+// 	char	*copy2;
 // 	copy = ft_strdup(av[1]);
-// 	printf("%s\n", copy);
+// 	copy2 = strdup(av[1]);
+// 	printf("ORIGINAL :%s\n", copy2);
+// 	printf("REPLICA  :%s\n", copy);
 // 	free(copy);
+// 	free(copy2);
 // 	return (1);
 // }
