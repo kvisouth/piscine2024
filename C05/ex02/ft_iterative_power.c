@@ -31,6 +31,6 @@ int	ft_iterative_power(int nb, int power)
 
 // int main (int ac, char **av)
 // {
-// 	if (ac > 1)
+// 	if (ac > 2)
 // 		printf("resultat :%d\n", ft_iterative_power(atoi(av[1]), atoi(av[2])));
 // }
