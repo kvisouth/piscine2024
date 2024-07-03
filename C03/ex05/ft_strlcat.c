@@ -44,14 +44,14 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (dest_len + src_len);	
 }
 
-#include <stdio.h>
-#include <stdlib.h>
-int main(int ac, char **av)
-{
-	if (ac != 4)
-		return 0;
-	int n = atoi(av[3]);
-	char *dest = av[1];
-	char *src = av[2];
-	printf("%d", ft_strlcat(dest, src, n));
-}
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(int ac, char **av)
+// {
+// 	if (ac != 4)
+// 		return 0;
+// 	int n = atoi(av[3]);
+// 	char *dest = av[1];
+// 	char *src = av[2];
+// 	printf("%d", ft_strlcat(dest, src, n));
+// }
