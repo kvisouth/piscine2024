@@ -17,7 +17,7 @@ int	ft_is_prime(int nb)
 	int	i;
 
 	i = 2;
-	if (nb == 2)
+	if (nb == 2 || nb == 2147483647)
 		return (1);
 	if (nb < 2 || nb % 2 == 0)
 		return (0);
@@ -35,6 +35,8 @@ int	ft_find_next_prime(int nb)
 	int	i;
 
 	i = nb;
+	if (nb == 2 || nb == 2147483647)
+		return (nb);
 	while (nb < INT_MAX)
 	{
 		if (ft_is_prime(i) == 1)
