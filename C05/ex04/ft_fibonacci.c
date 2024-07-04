@@ -27,13 +27,13 @@ int	ft_fibonacci(int index)
 	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 
-#include <stdio.h>
-#include <stdlib.h>
-int main (int ac, char **av)
-{
-	if (ac == 2)
-	{
-		int index = atoi(av[1]);
-		printf("%d\n", ft_fibonacci(index));
-	}
-}
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main (int ac, char **av)
+// {
+// 	if (ac == 2)
+// 	{
+// 		int index = atoi(av[1]);
+// 		printf("%d\n", ft_fibonacci(index));
+// 	}
+// }
