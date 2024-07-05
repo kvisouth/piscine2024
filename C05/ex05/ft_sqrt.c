@@ -15,10 +15,6 @@ Comment trouver une racine mathematiquement parlant :
 Racine de 9 = 3    -> C'est un carrée parfait        --> Retourne 3
 Racine de 7 = 2.64 -> Ce n'est pas un carrée parfait --> Retourne 0
 On veut retourner le resultat seulement 
-
-46342 c'est la racine carree de INT_MAX + 1 --> ca permet d'aller plus vite
-Pour empecher de faire le calcul ou i * i donne un
-resultat au dessus de INT_MAX
 */
 int	ft_sqrt(int nb)
 {
@@ -27,7 +23,7 @@ int	ft_sqrt(int nb)
 	i = 0;
 	if (nb < 0)
 		return (0);
-	while (i < nb && i < 46342)
+	while (i < nb && (i <= nb / i))
 	{
 		if (i * i == nb)
 			return (i);

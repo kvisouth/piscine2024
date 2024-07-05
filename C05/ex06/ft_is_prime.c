@@ -14,9 +14,6 @@
 Un nombre premier est donc un nombre dont ses SEULS diviseurs
 sont 1 et lui-même.
 (Son diviseur est FORCEMENT plus petit que ce nombre)
-
-On met 46342 pour que ce soit plus rapide :
-
 */
 int	ft_is_prime(int nb)
 {
@@ -27,7 +24,7 @@ int	ft_is_prime(int nb)
 		return (1);
 	if (nb < 2 || nb % 2 == 0)
 		return (0);
-	while (i < nb && i < 46342)
+	while (i < nb && (i <= nb / i))
 	{
 		if (nb % i == 0)
 			return (0);
