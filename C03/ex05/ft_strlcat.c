@@ -50,8 +50,10 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (dest_len + src_len);
 }
 
+/* Il faut compiler avec le flag -lbsd */
 // #include <stdio.h>
 // #include <stdlib.h>
+// #include <bsd/string.h>
 // int main(int ac, char **av)
 // {
 // 	if (ac != 4)
@@ -59,5 +61,10 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 // 	int n = atoi(av[3]);
 // 	char *dest = av[1];
 // 	char *src = av[2];
-// 	printf("%d", ft_strlcat(dest, src, n));
+// 	char *dest2 = strdup(av[1]);
+// 	char *src2 = strdup(av[2]);
+// 	printf("ORIGINAL : return = %ld | dest =%s\n",
+//  	strlcat(dest2, src2, n), dest2);
+// 	printf("REPLIQUE : return = %d | dest =%s\n",
+// 	ft_strlcat(dest, src, n), dest);
 // }
