@@ -21,7 +21,7 @@ int	ft_sqrt(int nb)
 	int	i;
 
 	i = 1;
-	if (nb < 0)
+	if (nb <= 0)
 		return (0);
 	while (i < nb && (i <= nb / i))
 	{
