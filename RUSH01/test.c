@@ -19,6 +19,13 @@ void print_grid(int	grid[4][4])
 	printf("\n");
 }
 
+/*
+This function will check if the number is valid in the row and column
+It will return 0 if the number is not valid
+A valid number is a number that is not in the row or column
+So there should be no same number in the row or column
+Also known as Latin Square
+*/
 int	is_valid(int grid[4][4], int row, int col, int num)
 {
 	int i = 0;
@@ -31,6 +38,13 @@ int	is_valid(int grid[4][4], int row, int col, int num)
 	return 1;
 }
 
+/*
+A Recursive function to fill the grid with numbers from 1 to 4
+It will check if the number is valid in the row and column with the is_valid function
+If the number is valid, it will fill the grid with the number and call itself with the next row and column
+If the number is not valid, it will try the next number
+If the row is 4, it will print the grid
+*/
 void fill_grid(int grid[4][4], int row, int col)
 {
 	if (row == 4)
