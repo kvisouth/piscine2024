@@ -23,7 +23,7 @@ int	ft_sqrt(int nb)
 	i = 1;
 	if (nb <= 0)
 		return (0);
-	while (i < nb && (i <= nb / i))
+	while (i * i <= nb && i <= 46340)
 	{
 		if (i * i == nb)
 			return (i);
@@ -32,12 +32,14 @@ int	ft_sqrt(int nb)
 	return (0);
 }
 
-// #include <stdio.h>
-// #include <stdlib.h>
-// int main(int ac, char **av)
-// {
-// 	if (ac == 2)
-// 	{
-// 		printf("%d\n", ft_sqrt(atoi(av[1])));
-// 	}
-// }
+/*
+ #include <stdio.h>
+ #include <stdlib.h>
+ int main(int ac, char **av)
+ {
+ 	if (ac == 2)
+ 	{
+ 		printf("%d\n", ft_sqrt(atoi(av[1])));
+ 	}
+ }
+ */
