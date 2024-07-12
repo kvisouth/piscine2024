@@ -15,31 +15,42 @@
 
 int ft_strlen(char *str)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
+{
+	unsigned int	i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while ((s1[i] != '\0' && s2[i] != '\0') && i < n - 1)
+	{
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1[i] - s2[i]);
+	}
+	return (s1[i] - s2[i]);
 }
 
 int count_words(char *str, char *sep)
 {
-    int i;
-    int j;
-    int cpt;
+	int cpt;
 
-    i = 0;
-    cpt = 0;
-    while (str[i])
-    {
-        while
-    }
-    
+	cpt = 0;
+	
 }
 
 
 char    **ft_split(char *str, char *charset)
 {
+  char **tab;
 
 }

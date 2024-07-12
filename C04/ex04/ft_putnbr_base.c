@@ -34,10 +34,10 @@ void	ft_putnbr_base(int nbr, char *base)
 	ft_putchar(base[nbr % ft_strlen(base)]);
 }
 
-// #include <stdlib.h>
-// int main (int ac, char **av)
-// {
-// 	if (ac != 3)
-// 		return 0;
-// 	ft_putnbr_base(atoi(av[1]), av[2]);
-// }
+#include <stdlib.h>
+int main (int ac, char **av)
+{
+	if (ac != 3)
+		return 0;
+	ft_putnbr_base(atoi(av[1]), av[2]);
+}
