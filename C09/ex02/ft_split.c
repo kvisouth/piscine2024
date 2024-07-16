@@ -114,6 +114,7 @@ char	**ft_split(char *str, char *charset)
 	int		i;
 	char	**tab;
 
+	i = 0;
 	tab = malloc((count_words(str, charset) + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
@@ -152,6 +153,7 @@ char	**ft_split(char *str, char *charset)
 // 			printf("%s\n", tab[i]);
 // 			i++;
 // 		}
+// 		free_tabs(tab);
 // 	}
 // 	return (0);
 // }
