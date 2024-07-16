@@ -18,7 +18,7 @@ In case one of the words fails the malloc.
 */
 void	free_tabs(char **tab)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (tab[i])
@@ -35,7 +35,7 @@ string 'sep', and 0 otherwise.
 */
 int	is_sep(char c, char *sep)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (sep[i])
@@ -56,8 +56,8 @@ Each words are separated by one of the characters in 'sep'.
 */
 int	count_words(char *str, char *sep)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
