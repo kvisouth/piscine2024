@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-i compte de la lettre 0 jusqu'au \0 dans str.
-Ce qui donne la longueur de str.
-*/
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -23,12 +19,3 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
-
-// #include <stdio.h>
-// int main(int ac, char **av)
-// {
-// 	if (ac != 2)
-// 		return 0;
-// 	printf("strlen = %d\n", ft_strlen(av[1]));
-// 	return 1;
-// }

@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Stocker a dans une var temporaire
-Remplacer a par b
-Affecter b par la var temporaire (qui etait a)
-*/
 void	ft_swap(int *a, int *b)
 {
 	int	tmp;
