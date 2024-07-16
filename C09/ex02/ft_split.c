@@ -13,23 +13,6 @@
 #include <stdlib.h>
 
 /*
-This function will free the every arrays of strings created by 'ft_split'.
-In case one of the words fails the malloc.
-*/
-void	free_tabs(char **tab)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-	{
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
-}
-
-/*
 This function will return 1 if the character 'c' is a separator, present in the
 string 'sep', and 0 otherwise.
 */
@@ -126,7 +109,7 @@ char	**ft_split(char *str, char *charset)
 		{
 			tab[i] = ft_dup(str, charset);
 			if (!tab[i])
-				return (free_tabs(tab), NULL);
+				return (NULL);
 			i++;
 		}
 		while (!is_sep(*str, charset) && *str)
@@ -153,7 +136,6 @@ char	**ft_split(char *str, char *charset)
 // 			printf("%s\n", tab[i]);
 // 			i++;
 // 		}
-// 		free_tabs(tab);
 // 	}
 // 	return (0);
 // }
